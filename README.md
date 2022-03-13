@@ -23,13 +23,13 @@ list of parent usernames:
 http://127.0.0.1:8000/parent_username_list/
 
 creating parent data
-http://127.0.0.1:8000/parent_data_create/<parent username>
+http://127.0.0.1:8000/parent_data_create/parentUsername
   
 updating parent data
-http://127.0.0.1:8000/parent_data_update/<parent username>
+http://127.0.0.1:8000/parent_data_update/parentUsername
 
 deleting parent data
-http://127.0.0.1:8000/parent_data_delete/<parent username>
+http://127.0.0.1:8000/parent_data_delete/parentUsername
 
   
   
@@ -37,10 +37,10 @@ list of child usernames:
 http://127.0.0.1:8000/child_username_list/
   
 creating child data
-http://127.0.0.1:8000/child_data_create/<child username>
+http://127.0.0.1:8000/child_data_create/childUsername>
   
 updating child data
-http://127.0.0.1:8000/child_data_update/<child username>
+http://127.0.0.1:8000/child_data_update/childUsername
 
 deleting child data
-http://127.0.0.1:8000/child_data_delete/<child username>
+http://127.0.0.1:8000/child_data_delete/childUsername
