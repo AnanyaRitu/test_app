@@ -1,0 +1,126 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>
+    Hello {{child.user}}
+</h3>
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+</form>
+    
+
+<a href={% url 'log_out' %}>Log Out
+</a><br>
+ <a href={% url 'child_create_data_view' %}>Create Data
+</a>
+<a href={% url 'child_update_data_view' %}>Update Data
+</a>
+
+<h2>Your Data</h2>
+
+<table>
+  <tr>
+      <td>First Name :</td>
+
+       <td>
+            {% if child.firstName %}
+            {{ child.firstName}}
+            {% endif %}
+
+         </td>
+  </tr>
+
+  <tr>
+        <td>Last Name :</td>
+
+       <td>
+          {% if child.lastName %}
+          {{ child.lastName}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+  
+
+</table>
+
+
+
+<h2>Your Parent's Data</h2>
+
+<table>
+  <tr>
+      <td>First Name :</td>
+
+       <td>
+            {% if child.parent.firstName %}
+            {{ child.parent.firstName}}
+            {% endif %}
+
+         </td>
+  </tr>
+
+  <tr>
+        <td>Last Name :</td>
+
+       <td>
+          {% if child.parent.lastName %}
+          {{ child.parent.lastName}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+    <tr>
+        <td>Street :</td>
+
+       <td>
+          {% if child.parent.street %}
+          {{ child.parent.street}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+    <tr>
+        <td>City :</td>
+
+       <td>
+          {% if child.parent.city %}
+          {{ child.parent.city}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+    <tr>
+        <td>State :</td>
+
+       <td>
+          {% if child.parent.state %}
+          {{ child.parent.state}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+    <tr>
+        <td>Zip :</td>
+
+       <td>
+          {% if child.parent.zip %}
+          {{ child.parent.zip}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+</table>
+
+
+
+{% endblock %}
+

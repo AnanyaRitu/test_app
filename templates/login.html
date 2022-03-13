@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+New Here?
+ <a href={% url 'parent_registration' %}>Parent Registration
+  </a>
+ <a href={% url 'child_registration' %}>Child Registration
+  </a>
+<form method="POST">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit">Login</button>
+</form>
+
+{% endblock %}

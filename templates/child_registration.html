@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block content %}
+<form method="POST">
+    {% csrf_token %}
+    <div>
+      Select your parent
+      <select name="dropdown">
+        {% for parent in parents %}
+        <option value={{parent.user.username}}>{{parent.user.username}}</option>
+        {% endfor %}
+      </select>
+    </div>
+    {{ form.as_p }}
+    
+    <button type="submit">Register</button>
+</form>
+
+{% endblock %}

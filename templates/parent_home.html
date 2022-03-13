@@ -1,0 +1,95 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h3>
+    Hello {{parent.user}}
+</h3>
+Hello {{parent.firstName}}
+
+<form method="POST">
+    {% csrf_token %}
+    <button type="submit">Delete</button>
+
+</form>
+
+<a href={% url 'log_out' %}>Log Out
+</a><br>
+<a href={% url 'parent_create_data_view' %}>Create Data
+</a>
+<a href={% url 'parent_update_data_view' %}>Update Data
+</a>
+
+
+<h2>Your Data</h2>
+
+<table>
+  <tr>
+      <td>First Name :</td>
+
+       <td>
+            {% if parent.firstName %}
+            {{ parent.firstName}}
+            {% endif %}
+
+         </td>
+  </tr>
+
+  <tr>
+        <td>Last Name :</td>
+
+       <td>
+          {% if parent.lastName %}
+          {{ parent.lastName}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+    <tr>
+        <td>Street :</td>
+
+       <td>
+          {% if parent.street %}
+          {{ parent.street}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+    <tr>
+        <td>City :</td>
+
+       <td>
+          {% if parent.city %}
+          {{ parent.city}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+    <tr>
+        <td>State :</td>
+
+       <td>
+          {% if parent.state %}
+          {{ parent.state}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+    <tr>
+        <td>Zip :</td>
+
+       <td>
+          {% if parent.zip %}
+          {{ parent.zip}}
+          {% endif %}
+
+       </td>
+    </tr>
+
+</table>
+
+
+{% endblock %}
