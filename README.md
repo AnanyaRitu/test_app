@@ -1,11 +1,11 @@
 # test_app
 
 Python version- 3.8.10
-To install python use the following command
+To install python:
 sudo apt install python3.8
 
-The required packages are listed in the requirements.txt file
-install the packages listed in the file use the command below-
+The required packages are listed in the requirements.txt file<br>
+install the packages:
 pip install -r requirements.txt
 
 to run the application:
