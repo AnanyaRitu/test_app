@@ -17,6 +17,12 @@ python manage.py test data
 The admin panel can be shown at-
 http://127.0.0.1:8000/admin/
 
+API fields for parent:
+ ['firstName', 'lastName', 'street', 'city', 'state', 'zip']
+
+API fields for child:
+['firstName', 'lastName']
+
 the api urls:
 
 list of parent usernames:
